@@ -1,0 +1,178 @@
+Aqui está uma versão alternativa mantendo a estrutura original do seu código, mas aplicando a paleta **rosa com amarelo** e fontes bem fofas (`Fredoka` para títulos e `Quicksand` para a leitura geral).
+
+Também corrigi um pequeno detalhe técnico no seu código original: a propriedade `font-family: 24px;` dentro do botão foi corrigida para `font-size: 24px;`.
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --branco: #FFFFFF;
+    --cor-de-fundo: #FFEAE3; /* Rosa pastel bem clarinho para o fundo */
+    --fundo-senha: #FF94B4;  /* Rosa chiclete vibrante */
+    --fundo-texto: #FFD384;  /* Amarelo pastel quente */
+    --borda: #FFA1A1;        /* Rosa suave para as bordas */
+    --fonte-titulo: 'Fredoka', sans-serif;
+    --fonte-texto: 'Quicksand', sans-serif;
+}
+
+* {
+    font-weight: 500; /* Letras levemente mais grossas para parecerem fofas */
+    border-radius: 16px; /* Cantos arredondados em tudo */
+}
+
+body {
+    color: #4A4A4A; /* Cinza escuro suave no lugar do preto puro */
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-texto);
+}
+
+label {
+    font-size: 20px;
+}
+
+.titulo-principal {
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    color: #FF6B8B; /* Rosa escuro para destaque */
+}
+
+.titulo-secundario {
+    font-size: 24px;
+    font-family: var(--fonte-titulo);
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.conteudo-senha {
+    margin-top: 80px;
+    background: var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
+}
+
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+    width: 70%;
+}
+
+#campo-senha:focus {
+    outline: none;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 3px dashed var(--borda); /* Borda tracejada estilo "feirinho/fofo" */
+    margin-top: 32px;
+    padding: 24px;
+}
+
+.parametro-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 28px;
+    color: #FF8E25; /* Tom de amarelo/laranja mais escuro */
+}
+
+.parametro-senha__titulo {
+    font-size: 24px;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
+}
+
+.parametro-senha__botao {
+    background-color: #FF6B8B; /* Botão ganha destaque em rosa */
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    font-family: var(--fonte-titulo);
+    cursor: pointer;
+}
+
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px dashed var(--borda);
+    border-bottom: 2px dashed var(--borda);
+    margin: 0;
+    font-size: 24px;
+    background-color: #FFFEE0; /* Amarelo bem clarinho de fundo */
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #FF6B8B; /* Caixa de seleção fica rosa */
+}
+
+.barra {
+    background-color: #FFF0F5; /* Fundo da barra de força */
+    height: 30px;
+    width: 100%;
+    overflow: hidden; /* Garante que as cores de força respeitem o arredondamento */
+}
+
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.fraca {
+    width: 25%;
+    background-color: #FF7676; /* Vermelho pastel */
+}
+
+.media {
+    width: 50%;
+    background-color: #FFD93D; /* Amarelo vivo */
+}
+
+.forte {
+    width: 100%;
+    background-color: #6BCB77; /* Verde menta */
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape {
+    padding: 24px;
+    color: #A0A0A0;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
+}
+
+```
